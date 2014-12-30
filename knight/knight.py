@@ -1,7 +1,5 @@
 #! python 2.7.8
 
-# knight.py
-
 class Knight:
 
     # does it make sense to use an immutable type here?
@@ -35,18 +33,14 @@ class Knight:
 
     def move(self):
         starting_points = self.start
-
         new_starting_points = []
-
         sub_moves = []
 
-        i = 0
         while(starting_points):
             r = starting_points.pop()
             for destination in self.candidates[r]:
                 sub_moves.append((destination, r))
                 new_starting_points.append(destination)
-
         
         self.moves.append(sub_moves)
         self.start = new_starting_points
