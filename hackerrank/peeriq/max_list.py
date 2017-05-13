@@ -17,6 +17,14 @@ import operator
 __total_operations = 2
 
 # Create dictionary
+# Using a dictionary is a better solution than a list.
+# It allows addition to indices without first having to waste
+#   time and resources first creating a list of size `n` initialized
+#   with values (which are all going to be zero anyway).
+# Inevitably there __may__ be some items in a list data structure
+#   that will never be modified at runtime, resulting in wasted
+#   memory allocation and possibly compute time if the data set is
+#   large.
 result = {}
 
 for i in range(__total_operations):
